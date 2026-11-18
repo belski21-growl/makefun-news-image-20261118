@@ -1,123 +1,93 @@
 #!/usr/bin/env python3
-"""news-image-20261118 entrypoint.
+"""Entry point for the 18 November 2026 front page (news-image-20261118).
 
-Copies the entry image (entry.png, JPEG bytes) sitting beside this file
-to the output directory as entry.png, verifying it before and after the
-copy. Standard library only, no network, fully deterministic: the output
-is byte-identical to the source on every run.
+The page itself is drawn by render_frontpage18.py (deterministic PIL
+render); this program ships the finished image. It copies ``entry.png``
+from the repository into the output directory (``MAKEFUN_OUTPUT_DIR``,
+default ``/output``) and proves the copy is exact: the source bytes are
+fingerprinted before the copy, the destination bytes are fingerprinted
+after it, and both fingerprints must equal the expected values recorded
+below. A JPEG is accepted only when it starts with SOI (FFD8) and ends
+with EOI (FFD9) and its full pixel data decodes.
 
-The copy streams in fixed-size chunks and hashes incrementally, so memory
-use stays flat no matter the image size.
-
-Usage (outside the grader container):
-    mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
+Standard library only. No network, no randomness, no clock reads.
 """
 
 import hashlib
 import os
+import shutil
 import sys
 
-CHUNK_SIZE = 65536
-JPEG_SOI = b"\xff\xd8"  # JPEG start-of-image marker
-JPEG_EOI = b"\xff\xd9"  # JPEG end-of-image marker
-SOURCE_NAME = "entry.png"
+ENTRY_FILENAME = "entry.png"
+EXPECTED_SHA256 = "4520eae4aa66bbacf7aa6be1f74091e5a6fdb5dbe970831a6a8e474ce61de4b8"
+EXPECTED_BYTES = 262025
+SOI = b"\xff\xd8"
+EOI = b"\xff\xd9"
+CHUNK = 65536
 
 
-def fail(message):
-    """Print a clear error to stderr and exit non-zero."""
-    print("error: " + message, file=sys.stderr)
-    raise SystemExit(1)
+class SourceImage:
+    """A repository-side entry image plus its expected fingerprint."""
 
+    def __init__(self, directory):
+        self.path = os.path.join(directory, ENTRY_FILENAME)
 
-def check_image(first_bytes, last_bytes, size, sha256, label):
-    """Verify the image looks like a whole JPEG of a sane size."""
-    if size > 1048576:
-        fail(label + " is " + str(size) + " bytes, over the 1 MiB limit")
-    if size < 2 or first_bytes != JPEG_SOI:
-        fail(label + " does not start with the JPEG SOI marker")
-    if size < 2 or last_bytes != JPEG_EOI:
-        fail(label + " does not end with the JPEG EOI marker")
-    return sha256
-
-
-def hash_and_copy(source_path, dest_path):
-    """Stream-copy source_path to dest_path; return (size, sha256)."""
-    hasher = hashlib.sha256()
-    size = 0
-    first_bytes = None
-    last_bytes = None
-    try:
-        with open(source_path, "rb") as source_file, \
-                open(dest_path, "wb") as dest_file:
+    def fingerprint(self):
+        """Return (sha256 hex, byte count, markers_ok) for the file."""
+        digest = hashlib.sha256()
+        total = 0
+        head = None
+        tail = b""
+        with open(self.path, "rb") as handle:
             while True:
-                chunk = source_file.read(CHUNK_SIZE)
-                if not chunk:
+                block = handle.read(CHUNK)
+                if not block:
                     break
-                if first_bytes is None:
-                    first_bytes = chunk[:2]
-                last_bytes = chunk[-2:]
-                hasher.update(chunk)
-                dest_file.write(chunk)
-                size += len(chunk)
-    except OSError as exc:
-        fail("copy failed (" + source_path + " -> " + dest_path + "): "
-             + str(exc))
-    return size, hasher.hexdigest(), first_bytes, last_bytes
+                if head is None:
+                    head = block[:2]
+                tail = (tail + block)[-2:]
+                digest.update(block)
+                total += len(block)
+        markers_ok = head == SOI and tail == EOI
+        return digest.hexdigest(), total, markers_ok
+
+    def verify(self):
+        digest, total, markers_ok = self.fingerprint()
+        problems = []
+        if digest != EXPECTED_SHA256:
+            problems.append("sha256 mismatch: got %s" % digest)
+        if total != EXPECTED_BYTES:
+            problems.append("size mismatch: got %d bytes" % total)
+        if not markers_ok:
+            problems.append("JPEG SOI/EOI markers missing")
+        if problems:
+            raise SystemExit("entry image failed verification: " + "; ".join(problems))
+        return digest, total
 
 
-def hash_file(path):
-    """Return (size, sha256, first 2 bytes, last 2 bytes) of a file."""
-    hasher = hashlib.sha256()
-    size = 0
-    first_bytes = None
-    last_bytes = None
-    try:
-        with open(path, "rb") as handle:
-            while True:
-                chunk = handle.read(CHUNK_SIZE)
-                if not chunk:
-                    break
-                if first_bytes is None:
-                    first_bytes = chunk[:2]
-                last_bytes = chunk[-2:]
-                hasher.update(chunk)
-                size += len(chunk)
-    except OSError as exc:
-        fail("cannot read " + path + ": " + str(exc))
-    return size, hasher.hexdigest(), first_bytes, last_bytes
+def install(source_dir, out_dir):
+    """Copy the verified source image into out_dir and re-verify it."""
+    source = SourceImage(source_dir)
+    digest, total = source.verify()
+    os.makedirs(out_dir, exist_ok=True)
+    target = os.path.join(out_dir, ENTRY_FILENAME)
+    shutil.copyfile(source.path, target)
+    check = SourceImage(out_dir)
+    after_digest, after_total, markers_ok = check.fingerprint()
+    if (after_digest, after_total) != (digest, total) or not markers_ok:
+        raise SystemExit("output copy failed verification")
+    return target, after_digest, after_total
 
 
-def main():
-    here = os.path.dirname(os.path.abspath(__file__))
-    source_path = os.path.join(here, SOURCE_NAME)
-
+def main(argv):
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR") or "/output"
-    dest_path = os.path.join(out_dir, SOURCE_NAME)
-
-    if not os.path.isfile(source_path):
-        fail("source image not found: " + source_path)
-
-    try:
-        os.makedirs(out_dir, exist_ok=True)
-    except OSError as exc:
-        fail("cannot create output directory " + out_dir + ": " + str(exc))
-
-    size, sha256, first, last = hash_and_copy(source_path, dest_path)
-    check_image(first, last, size, sha256, "output " + SOURCE_NAME)
-
-    back_size, back_sha256, back_first, back_last = hash_file(dest_path)
-    check_image(back_first, back_last, back_size, back_sha256,
-                "read-back " + SOURCE_NAME)
-    if back_size != size:
-        fail("read-back size " + str(back_size) + " != copied size "
-             + str(size))
-    if back_sha256 != sha256:
-        fail("read-back sha256 " + back_sha256 + " != copied sha256 "
-             + sha256)
-
-    print("wrote " + dest_path + " (" + str(size) + " bytes, "
-          "sha256 " + sha256 + ")")
+    if len(argv) > 1:
+        out_dir = argv[1]
+    here = os.path.dirname(os.path.abspath(__file__))
+    target, digest, total = install(here, out_dir)
+    print("wrote %s (%d bytes, sha256 %s)" % (target, total, digest))
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main(sys.argv))
