@@ -99,42 +99,42 @@ FEATURED = [
      "VOYAGER 1 IS ONE LIGHT-DAY OUT",
      "NASA's probe, 25.9bn km from Earth, crosses a milestone 48 years after launch.",
      "CONFIRMED", "NASA", "voyager", None, None),
-    (4, "ASIA-PACIFIC", "LABOUR",
+    (4, "NORTH AMERICA", "CULTURE",
+     "GTA VI GOES ON SALE",
+     "Midnight launch in New Zealand; 15m+ pre-orders.",
+     "CONFIRMED", "Reuters", "gta", -74.0, 40.7),
+    (5, "EUROPE", "CONFLICT",
+     "RUSSIA FIRES 141 DRONES AT UKRAINE",
+     "Overnight barrage; air defences down most of them.",
+     "CONFIRMED", "Reuters", "strikes", 30.5, 50.4),
+    (6, "NORTH AMERICA", "MARKETS",
+     "FED MINUTES POINT TO MORE RATE HIKES",
+     "Minutes signal further tightening; markets slide.",
+     "CONFIRMED", "Reuters", "fed", -77.0, 38.9),
+    (7, "EUROPE", "CLIMATE",
+     "COP31 SPLITS OVER FOSSIL-FUEL PHASE-OUT",
+     "Draft divides over phase-out wording; talks run on.",
+     "CONFIRMED", "Reuters", "cop31", 30.7, 36.9),
+    (8, "ASIA-PACIFIC", "LABOUR",
      "BANGLADESH STRIKE SHUTS ~500 FACTORIES",
-     "Garment workers strike over pay; Dhaka plants close.",
-     "CONFIRMED", "Reuters", "factory", 90.4, 23.8),
-    (5, "AFRICA", "SECURITY",
+     "AFP: about 500 of ~4,500 garment plants shut.",
+     "CONFIRMED", "AFP", "factory", 90.4, 23.8),
+    (9, "AFRICA", "SECURITY",
      "ETHIOPIA, ERITREA MASS TROOPS AT BORDER",
      "Both sides build up forces; neighbours urge restraint.",
      "CLAIM", "Reuters", "border", 39.0, 14.5),
-    (6, "NORTH AMERICA", "SECURITY",
+    (10, "NORTH AMERICA", "SECURITY",
      "RAID ON GANG BOSS HOME IN HAITI",
      "Salvadoran troops join Haitian police in a dawn swoop.",
      "CONFIRMED", "AP", "raid", -72.3, 18.5),
-    (7, "ASIA-PACIFIC", "CULTURE",
+    (11, "ASIA-PACIFIC", "CULTURE",
      "TAME IMPALA SWEEPS THE ARIA AWARDS",
      "Australian act takes the night's top honours in Sydney.",
      "CONFIRMED", "AP", "awards", 151.2, -33.9),
-    (8, "EUROPE", "SPORT",
-     "ALCARAZ BEATS MEDVEDEV IN TURIN",
-     "Spaniard advances in Turin; the final looms on Sunday.",
-     "CONFIRMED", "ATP", "tennis", 7.7, 45.1),
-    (9, "NORTH AMERICA", "POLITICS",
+    (12, "NORTH AMERICA", "POLITICS",
      "JEFFRIES NOMINATED 251-11 FOR SPEAKER",
      "House Democrats pick their leader; floor vote 3 Jan 2027.",
      "CONFIRMED", "AP", "parliament", -77.0, 38.9),
-    (10, "NORTH AMERICA", "MARKETS",
-     "DOW FALLS 561 POINTS, DOWN 1.1%",
-     "Fourth straight drop; gold hits a 14-month low.",
-     "CONFIRMED", "Reuters", "market", -74.0, 40.7),
-    (11, "NORTH AMERICA", "TECH",
-     "ANTHROPIC PRICES IPO AT $83 A SHARE",
-     "$81bn listing, ticker ANT; shares debut on Thursday.",
-     "CONFIRMED", "Reuters", "ipo", -122.4, 37.8),
-    (12, "ASIA-PACIFIC", "TRADE",
-     "CHINA AND CANADA CUT TARIFFS",
-     "Xi and Carney agree C$400m relief on pork, seafood.",
-     "CONFIRMED", "Reuters", "trade", -75.7, 45.4),
     (13, "MIDDLE EAST", "DIPLOMACY",
      "GAZA TRUCE MAY COLLAPSE",
      "Board of Peace warns the ceasefire is fraying.",
@@ -148,38 +148,38 @@ BRIEFS = [
     (16, "SOUTH AMERICA", "Bogota: US plans joint strikes on gangs."),
     (17, "SOUTH AMERICA", "Brasilia: Senate passes $10bn Lula package."),
     (18, "AFRICA", "Maputo: Exxon $30bn Rovuma LNG approved."),
-    (19, "AFRICA", "Johannesburg coalition talks begin."),
-    (20, "EUROPE", "Europe off track on antibiotics: ECDC."),
-    (21, "ASIA-PACIFIC", "Kashmir: forces kill militant commander."),
-    (22, "ASIA-PACIFIC", "Myanmar leader to review ASEAN ties."),
-    (23, "AFRICA", "Senegal migrant boat capsizes."),
-    (24, "AFRICA", "Uganda, Tanzania speed oil pipeline."),
-    (25, "AFRICA", "S. Africa: protests cut HIV care, groups say."),
-    (26, "MIDDLE EAST", "US adds sanctions on Hezbollah: Lebanon."),
-    (27, "MIDDLE EAST", "Iraq: French ISIL joiners get life terms."),
-    (28, "MIDDLE EAST", "Israel court extends Gaza doctor detention."),
-    (29, "NORTH AMERICA", "Grimes scores 47; Lakers win 9th straight."),
-    (30, "EUROPE", "Turin doubles: Harrison, Skupski win."),
-    (31, "ASIA-PACIFIC", "Manila: Trump hails 'biggest' trade deal."),
-    (32, "ASIA-PACIFIC", "Takaichi to make first China visit since 2019."),
-    (33, "ASIA-PACIFIC", "Seoul: Lee seeks Xi help on the North."),
-    (34, "ASIA-PACIFIC", "Australia sanctions settler leader Weiss."),
-    (35, "AFRICA", "WHO keeps DR Congo Ebola an emergency."),
-    (36, "MIDDLE EAST", "Riyadh: coalition downs Houthi missile."),
-    (37, "MIDDLE EAST", "Iran says it downed a US MQ-9 drone. (CLAIM)"),
-    (38, "EUROPE", "ICJ sets Rohingya genocide ruling date."),
-    (39, "NORTH AMERICA", "NSA network outage spreads to Georgia."),
-    (40, "SOUTH AMERICA", "Hegseth visit seals Caracas defence pact."),
-    (41, "NORTH AMERICA", "Sheinbaum: US trade talks 'very far along'."),
-    (42, "ASIA-PACIFIC", "Cyclone Xavier nears Pukapuka at Cat 5."),
-    (43, "EUROPE", "EU proposes 45bn euro loan for Ukraine."),
-    (44, "EUROPE", "UK sanctions 8 settler firms, Tzav 9."),
-    (45, "AFRICA", "Sudan: drones killed 1,630+ civilians in 2026."),
-    (46, "EUROPE", "UK inflation 3.6%, a one-year high."),
-    (47, "EUROPE", "Ukraine drones hit Afipsky, Ilsky refineries."),
-    (48, "EUROPE", "Abu Dhabi hosts Ukraine-Russia-US talks."),
-    (49, "ASIA-PACIFIC", "Shenzhen: Xi, Putin decry sanctions."),
-    (50, "ASIA-PACIFIC", "Cyclone Akvan: 80,000+ evacuated in Odisha."),
+    (19, "EUROPE", "Europe off track on antibiotics: ECDC."),
+    (20, "ASIA-PACIFIC", "Kashmir: forces kill militant commander."),
+    (21, "ASIA-PACIFIC", "Myanmar leader to review ASEAN ties."),
+    (22, "AFRICA", "Uganda, Tanzania speed oil pipeline."),
+    (23, "AFRICA", "S. Africa: protests cut HIV care, groups say."),
+    (24, "MIDDLE EAST", "US adds sanctions on Hezbollah: Lebanon."),
+    (25, "MIDDLE EAST", "Iraq: French ISIL joiners get life terms."),
+    (26, "MIDDLE EAST", "Israel court extends Gaza doctor detention."),
+    (27, "NORTH AMERICA", "Dow falls 561 points, down 1.1%."),
+    (28, "ASIA-PACIFIC", "Manila: Trump hails 'biggest' trade deal."),
+    (29, "ASIA-PACIFIC", "Takaichi to make first China visit since 2019."),
+    (30, "ASIA-PACIFIC", "Seoul: Lee seeks Xi help on the North."),
+    (31, "ASIA-PACIFIC", "Australia sanctions settler leader Weiss."),
+    (32, "AFRICA", "WHO keeps DR Congo Ebola an emergency."),
+    (33, "MIDDLE EAST", "Riyadh: coalition downs Houthi missile."),
+    (34, "MIDDLE EAST", "Iran says it downed a US MQ-9 drone. (CLAIM)"),
+    (35, "EUROPE", "ICJ sets Rohingya genocide ruling date."),
+    (36, "NORTH AMERICA", "NSA network outage spreads to Georgia."),
+    (37, "SOUTH AMERICA", "Hegseth visit seals Caracas defence pact."),
+    (38, "NORTH AMERICA", "Sheinbaum: US trade talks 'very far along'."),
+    (39, "ASIA-PACIFIC", "Cyclone Xavier nears Pukapuka at Cat 5."),
+    (40, "EUROPE", "EU proposes 45bn euro loan for Ukraine."),
+    (41, "EUROPE", "UK sanctions 8 settler firms, Tzav 9."),
+    (42, "AFRICA", "Amnesty: RSF drones killed 37 in El Obeid."),
+    (43, "EUROPE", "UK inflation 3.6%, a one-year high."),
+    (44, "EUROPE", "Ukraine drones hit Afipsky, Ilsky refineries."),
+    (45, "EUROPE", "Abu Dhabi hosts Ukraine-Russia-US talks."),
+    (46, "ASIA-PACIFIC", "Shenzhen: Xi, Putin decry sanctions."),
+    (47, "ASIA-PACIFIC", "Cyclone Akvan: 80,000+ evacuated in Odisha."),
+    (48, "NORTH AMERICA", "Anthropic prices IPO at $83 a share."),
+    (49, "EUROPE", "Alcaraz beats Medvedev in Turin."),
+    (50, "ASIA-PACIFIC", "China and Canada cut tariffs; C$400m relief."),
 ]
 
 # Left out on purpose: first reported Tuesday 17 November, not 18 November.
@@ -191,14 +191,14 @@ DATE_CHECK = [
     "US strike on Qeshm",
     "Prague train crash",
     "Mongolia president resigning",
-    "Knesset speaker vote",
+    "An-12 crash kills 19 in Siberia",
 ]
 
 # BY THE NUMBERS: (big value, small label).
 NUMBERS = [
     ("-561", "Dow points, -1.1%"),
     ("251-11", "Jeffries nominated"),
-    ("~500", "factories shut, Bangladesh"),
+    ("~500", "factories shut, Bangladesh (AFP)"),
     ("80,000+", "Akvan evacuations"),
     ("$3,725.18", "gold, -3.2%, 14-mo low"),
     ("25.9bn km", "Voyager 1 from Earth"),
@@ -258,45 +258,154 @@ def _flag(d, x, y, w, h, stripes):
 
 
 def scene_tarmac(d, x, y, w, h):
+    # Sky, sun, clouds.
     d.rectangle([x, y, x + w, y + h], fill=(158, 196, 228))
-    d.ellipse([x + w - 26, y + 6, x + w - 8, y + 24], fill=(250, 214, 120))
-    d.rectangle([x, y + h * 0.62, x + w, y + h], fill=(96, 98, 104))
-    d.rectangle([x, y + h * 0.62, x + w, y + h * 0.62 + 3], fill=(250, 250, 250))
-    d.rectangle([x + w * 0.30, y + h * 0.30, x + w * 0.78, y + h * 0.52],
+    d.ellipse([x + w - 34, y + 6, x + w - 14, y + 26], fill=(250, 214, 120))
+    for cx, cy, cw in [(0.06, 0.10, 30), (0.62, 0.07, 24)]:
+        d.ellipse([x + cx * w, y + cy * h, x + cx * w + cw,
+                   y + cy * h + 8], fill=(255, 255, 255))
+    # Terminal building, left.
+    d.rectangle([x + 6, y + h * 0.34, x + w * 0.20, y + h * 0.68],
+                fill=(120, 126, 138))
+    d.rectangle([x + 6, y + h * 0.34, x + w * 0.20, y + h * 0.39],
+                fill=(90, 96, 110))
+    for i in range(3):
+        d.rectangle([x + 12 + i * 14, y + h * 0.43,
+                     x + 20 + i * 14, y + h * 0.53], fill=(250, 220, 120))
+    # Runway with centreline dashes.
+    d.rectangle([x, y + h * 0.68, x + w, y + h], fill=(96, 98, 104))
+    for i in range(9):
+        d.rectangle([x + 8 + i * (w - 16) / 9, y + h * 0.82,
+                     x + 8 + (i + 0.55) * (w - 16) / 9, y + h * 0.82 + 3],
+                    fill=(255, 255, 255))
+    # Airliner: tail fin, fuselage, nose, cheatline, windows,
+    # swept wing, engines, landing gear.
+    d.polygon([(x + w * 0.30, y + h * 0.44), (x + w * 0.30, y + h * 0.08),
+               (x + w * 0.38, y + h * 0.44)], fill=(178, 34, 34))
+    d.rectangle([x + w * 0.30, y + h * 0.30, x + w * 0.82, y + h * 0.52],
                 fill=(240, 240, 244))
-    d.polygon([(x + w * 0.78, y + h * 0.34), (x + w * 0.94, y + h * 0.42),
-               (x + w * 0.78, y + h * 0.50)], fill=(200, 205, 212))
-    d.rectangle([x + w * 0.55, y + h * 0.14, x + w * 0.58, y + h * 0.32],
-                fill=(200, 205, 212))
-    d.rectangle([x + w * 0.30, y + h * 0.52, x + w * 0.34, y + h * 0.62],
+    d.polygon([(x + w * 0.82, y + h * 0.30), (x + w * 0.95, y + h * 0.41),
+               (x + w * 0.82, y + h * 0.52)], fill=(220, 224, 230))
+    d.rectangle([x + w * 0.30, y + h * 0.46, x + w * 0.82, y + h * 0.52],
+                fill=(178, 34, 34))
+    for i in range(3):
+        d.rectangle([x + w * (0.84 + i * 0.03), y + h * 0.34,
+                     x + w * (0.86 + i * 0.03), y + h * 0.38], fill=NAVY)
+    for i in range(8):
+        d.rectangle([x + w * (0.34 + i * 0.055), y + h * 0.35,
+                     x + w * (0.36 + i * 0.055), y + h * 0.40], fill=NAVY)
+    d.polygon([(x + w * 0.44, y + h * 0.50), (x + w * 0.58, y + h * 0.50),
+               (x + w * 0.66, y + h * 0.68), (x + w * 0.52, y + h * 0.68)],
+              fill=(200, 205, 212))
+    d.rectangle([x + w * 0.50, y + h * 0.52, x + w * 0.54, y + h * 0.60],
                 fill=(60, 62, 68))
-    d.rectangle([x + w * 0.68, y + h * 0.52, x + w * 0.72, y + h * 0.62],
+    d.rectangle([x + w * 0.62, y + h * 0.52, x + w * 0.66, y + h * 0.60],
                 fill=(60, 62, 68))
-    _flag(d, x + 8, y + 8, 20, 13, [(178, 34, 34), (255, 255, 255),
-                                   (178, 34, 34)])
-    _flag(d, x + 32, y + 8, 20, 13, [(222, 41, 16), (255, 222, 0)])
-    d.ellipse([x + w * 0.42, y + h * 0.36, x + w * 0.46, y + h * 0.42],
-              fill=NAVY)
+    d.rectangle([x + w * 0.38, y + h * 0.52, x + w * 0.40, y + h * 0.68],
+                fill=(60, 62, 68))
+    d.rectangle([x + w * 0.74, y + h * 0.52, x + w * 0.76, y + h * 0.68],
+                fill=(60, 62, 68))
+    # Flags on the tarmac foreground: China bottom-left, US bottom-right.
+    d.line([x + w * 0.10, y + h * 0.70, x + w * 0.10, y + h * 0.97],
+           fill=INK, width=2)
+    d.rectangle([x + w * 0.10, y + h * 0.70, x + w * 0.10 + 20,
+                 y + h * 0.70 + 11], fill=(222, 41, 16))
+    d.ellipse([x + w * 0.10 + 3, y + h * 0.70 + 3,
+               x + w * 0.10 + 7, y + h * 0.70 + 7], fill=(255, 222, 0))
+    d.line([x + w * 0.92, y + h * 0.70, x + w * 0.92, y + h * 0.97],
+           fill=INK, width=2)
+    _flag(d, x + w * 0.92 - 20, y + h * 0.70, 20, 11,
+          [(178, 34, 34), (255, 255, 255), (178, 34, 34),
+           (255, 255, 255), (178, 34, 34)])
+    d.rectangle([x + w * 0.92 - 20, y + h * 0.70, x + w * 0.92 - 12,
+                 y + h * 0.70 + 5], fill=(30, 60, 140))
+
+
+def _dashed(d, x0, y0, x1, y1, fill, width=1, dash=5, gap=4):
+    """Dashed straight line (deterministic, no PIL dash support)."""
+    import math
+    dx, dy = x1 - x0, y1 - y0
+    length = math.hypot(dx, dy)
+    if length == 0:
+        return
+    ux, uy = dx / length, dy / length
+    s = 0.0
+    while s < length:
+        e = min(s + dash, length)
+        d.line([x0 + ux * s, y0 + uy * s, x0 + ux * e, y0 + uy * e],
+               fill=fill, width=width)
+        s = e + gap
+
+
+def _jet(d, cx, cy, s, fill=(150, 155, 165)):
+    """Small delta-wing jet silhouette pointing up-right."""
+    d.polygon([(cx - 14 * s, cy + 5 * s), (cx + 16 * s, cy - 10 * s),
+               (cx + 18 * s, cy - 6 * s), (cx - 12 * s, cy + 9 * s)],
+              fill=fill)
+    d.polygon([(cx + 2 * s, cy - 4 * s), (cx - 9 * s, cy + 13 * s),
+               (cx + 5 * s, cy + 1 * s)], fill=(120, 125, 135))
+    d.polygon([(cx - 8 * s, cy + 2 * s), (cx - 14 * s, cy - 6 * s),
+               (cx - 4 * s, cy - 1 * s)], fill=(120, 125, 135))
+    d.ellipse([cx - 18 * s, cy + 3 * s, cx - 12 * s, cy + 9 * s],
+              fill=(250, 140, 40))
+    d.ellipse([cx - 16 * s, cy + 5 * s, cx - 13 * s, cy + 8 * s],
+              fill=(255, 220, 100))
+
+
+def _drone_x(d, cx, cy, r=7, fill=(220, 220, 220)):
+    d.line([cx - r, cy, cx + r, cy], fill=fill, width=2)
+    d.line([cx, cy - r, cx, cy + r], fill=fill, width=2)
+    d.ellipse([cx - 3, cy - 3, cx + 3, cy + 3], fill=(120, 120, 130))
+    for ox, oy in [(-r, -r), (r, -r), (-r, r), (r, r)]:
+        d.ellipse([cx + ox - 2, cy + oy - 2, cx + ox + 2, cy + oy + 2],
+                  fill=fill)
+
+
+def _burst(d, cx, cy, r=9):
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(250, 140, 40))
+    d.ellipse([cx - r * 0.55, cy - r * 0.55, cx + r * 0.55, cy + r * 0.55],
+              fill=(255, 220, 100))
+    for k in range(8):
+        import math
+        a = k * math.pi / 4
+        d.line([cx + r * 0.8 * math.cos(a), cy + r * 0.8 * math.sin(a),
+                cx + r * 1.6 * math.cos(a), cy + r * 1.6 * math.sin(a)],
+               fill=(250, 160, 60), width=2)
 
 
 def scene_drones(d, x, y, w, h):
     d.rectangle([x, y, x + w, y + h], fill=(16, 22, 44))
-    for sx, sy in [(0.12, 0.2), (0.3, 0.12), (0.55, 0.25), (0.78, 0.14),
-                   (0.9, 0.3), (0.42, 0.3), (0.66, 0.08)]:
+    for sx, sy in [(0.08, 0.18), (0.30, 0.10), (0.55, 0.22), (0.78, 0.10),
+                   (0.92, 0.28), (0.42, 0.28), (0.66, 0.06)]:
         d.ellipse([x + sx * w - 1, y + sy * h - 1, x + sx * w + 1,
                    y + sy * h + 1], fill=(255, 255, 255))
-    d.polygon([(x + w * 0.62, y + h * 0.30), (x + w * 0.70, y + h * 0.42),
-               (x + w * 0.62, y + h * 0.54), (x + w * 0.54, y + h * 0.42)],
-              fill=(250, 200, 60))
-    for dx, dy in [(0.22, 0.28), (0.40, 0.22), (0.82, 0.34)]:
-        cx, cy = x + dx * w, y + dy * h
-        d.line([cx - 7, cy, cx + 7, cy], fill=(220, 220, 220), width=2)
-        d.line([cx, cy - 7, cx, cy + 7], fill=(220, 220, 220), width=2)
-        d.ellipse([cx - 3, cy - 3, cx + 3, cy + 3], fill=(120, 120, 130))
-    for i in range(5):
-        yy = y + h * 0.55 + i * 4
-        d.line([x + 6, yy, x + 16, yy], fill=(250, 120, 60), width=1)
+    d.ellipse([x + w * 0.88, y + h * 0.06, x + w * 0.96, y + h * 0.18],
+              fill=(220, 220, 210))
+    # Intercepting jets with dashed intercept lines up to the drones.
+    _jet(d, x + w * 0.20, y + h * 0.62, 1.0)
+    _jet(d, x + w * 0.68, y + h * 0.58, 0.9)
+    _dashed(d, x + w * 0.22, y + h * 0.56, x + w * 0.32, y + h * 0.24,
+            (255, 255, 255), width=1)
+    _dashed(d, x + w * 0.70, y + h * 0.52, x + w * 0.60, y + h * 0.22,
+            (255, 255, 255), width=1)
+    _dashed(d, x + w * 0.86, y + h * 0.55, x + w * 0.84, y + h * 0.30,
+            (255, 255, 255), width=1)
+    # Incoming drones + intercept bursts.
+    _drone_x(d, x + w * 0.32, y + h * 0.22)
+    _drone_x(d, x + w * 0.60, y + h * 0.20)
+    _drone_x(d, x + w * 0.84, y + h * 0.28)
+    _burst(d, x + w * 0.44, y + h * 0.30)
+    _burst(d, x + w * 0.72, y + h * 0.26, r=7)
+    # Ground: skyline, radar dish, launcher.
     d.rectangle([x, y + h * 0.82, x + w, y + h], fill=(38, 48, 66))
+    for bx, bw_, bh_ in [(0.02, 0.10, 0.10), (0.14, 0.08, 0.14),
+                         (0.78, 0.09, 0.12), (0.89, 0.09, 0.09)]:
+        d.rectangle([x + bx * w, y + h * (0.82 - bh_),
+                     x + (bx + bw_) * w, y + h * 0.82], fill=(24, 32, 50))
+    d.line([x + w * 0.52, y + h * 0.82, x + w * 0.52, y + h * 0.68],
+           fill=(200, 200, 210), width=2)
+    d.polygon([(x + w * 0.47, y + h * 0.68), (x + w * 0.57, y + h * 0.68),
+               (x + w * 0.52, y + h * 0.76)], fill=(200, 200, 210))
 
 
 def scene_voyager(d, x, y, w, h):
@@ -477,26 +586,157 @@ def scene_trade(d, x, y, w, h):
                (x + w * 0.50, y + h * 0.22)], fill=TEAL)
 
 
+def scene_gta(d, x, y, w, h):
+    # Night city skyline, searchlights, neon VI sign.
+    d.rectangle([x, y, x + w, y + h], fill=(24, 16, 44))
+    for sx, sy in [(0.06, 0.12), (0.22, 0.08), (0.58, 0.10), (0.76, 0.06),
+                   (0.94, 0.14), (0.40, 0.16)]:
+        d.ellipse([x + sx * w - 1, y + sy * h - 1, x + sx * w + 1,
+                   y + sy * h + 1], fill=(255, 255, 255))
+    d.polygon([(x + w * 0.08, y + h), (x + w * 0.20, y + h),
+               (x + w * 0.36, y), (x + w * 0.28, y)], fill=(90, 90, 130))
+    d.polygon([(x + w * 0.80, y + h), (x + w * 0.92, y + h),
+               (x + w * 0.72, y), (x + w * 0.64, y)], fill=(90, 90, 130))
+    for bx, bw_, bh_ in [(0.02, 0.10, 0.42), (0.14, 0.08, 0.55),
+                         (0.24, 0.12, 0.38), (0.38, 0.09, 0.60),
+                         (0.50, 0.11, 0.45), (0.63, 0.08, 0.58),
+                         (0.73, 0.12, 0.40), (0.87, 0.11, 0.52)]:
+        d.rectangle([x + bx * w, y + h * (1 - bh_),
+                     x + (bx + bw_) * w, y + h], fill=(12, 10, 26))
+        for wy in (0.55, 0.70, 0.85):
+            if bh_ > 1 - wy:
+                d.rectangle([x + (bx + 0.02) * w, y + h * wy,
+                             x + (bx + 0.05) * w, y + h * wy + 2],
+                            fill=(250, 214, 120))
+    vf = sans_b(24)
+    vt = "VI"
+    vw = vf.getlength(vt)
+    d.text((x + (w - vw) / 2 + 1, y + h * 0.16 + 1), vt, font=vf,
+           fill=(255, 80, 200))
+    d.text((x + (w - vw) / 2, y + h * 0.16), vt, font=vf,
+           fill=(255, 220, 245))
+
+
+def scene_strikes(d, x, y, w, h):
+    # Night sky over a city: incoming drones, flak bursts, dotted fire.
+    d.rectangle([x, y, x + w, y + h], fill=(18, 20, 40))
+    for sx, sy in [(0.08, 0.14), (0.28, 0.08), (0.52, 0.12), (0.74, 0.07),
+                   (0.92, 0.16), (0.42, 0.22)]:
+        d.ellipse([x + sx * w - 1, y + sy * h - 1, x + sx * w + 1,
+                   y + sy * h + 1], fill=(255, 255, 255))
+    d.ellipse([x + w * 0.86, y + h * 0.06, x + w * 0.94, y + h * 0.20],
+              fill=(220, 220, 210))
+    _dashed(d, x + w * 0.20, y + h * 0.95, x + w * 0.30, y + h * 0.35,
+            (255, 220, 120), width=1)
+    _dashed(d, x + w * 0.62, y + h * 0.95, x + w * 0.55, y + h * 0.30,
+            (255, 220, 120), width=1)
+    _drone_x(d, x + w * 0.30, y + h * 0.30, r=6)
+    _drone_x(d, x + w * 0.55, y + h * 0.26, r=6)
+    _drone_x(d, x + w * 0.78, y + h * 0.34, r=6)
+    _burst(d, x + w * 0.42, y + h * 0.42, r=7)
+    _burst(d, x + w * 0.68, y + h * 0.48, r=6)
+    for bx, bw_, bh_ in [(0.02, 0.12, 0.22), (0.16, 0.09, 0.30),
+                         (0.28, 0.11, 0.20), (0.42, 0.09, 0.32),
+                         (0.54, 0.12, 0.22), (0.68, 0.09, 0.28),
+                         (0.80, 0.10, 0.20), (0.92, 0.07, 0.26)]:
+        d.rectangle([x + bx * w, y + h * (1 - bh_),
+                     x + (bx + bw_) * w, y + h], fill=(8, 10, 20))
+        d.rectangle([x + (bx + 0.03) * w, y + h * (1 - bh_ + 0.06),
+                     x + (bx + 0.06) * w, y + h * (1 - bh_ + 0.06) + 2],
+                    fill=(250, 214, 120))
+
+
+def scene_fed(d, x, y, w, h):
+    # Central-bank columns + a rising rate line with arrow.
+    d.rectangle([x, y, x + w, y + h], fill=(226, 220, 200))
+    d.polygon([(x + w * 0.06, y + h * 0.30), (x + w * 0.30, y + h * 0.08),
+               (x + w * 0.54, y + h * 0.30)], fill=(150, 140, 118))
+    for i in range(4):
+        d.rectangle([x + w * (0.10 + i * 0.11), y + h * 0.32,
+                     x + w * (0.15 + i * 0.11), y + h * 0.78],
+                    fill=(190, 180, 156))
+    d.rectangle([x + w * 0.06, y + h * 0.78, x + w * 0.54, y + h * 0.84],
+                fill=(150, 140, 118))
+    d.rectangle([x + w * 0.04, y + h * 0.86, x + w * 0.56, y + h * 0.92],
+                fill=(120, 112, 94))
+    d.line([x + w * 0.62, y + h * 0.82, x + w * 0.98, y + h * 0.82],
+           fill=(120, 116, 104), width=1)
+    d.line([x + w * 0.62, y + h * 0.82, x + w * 0.62, y + h * 0.12],
+           fill=(120, 116, 104), width=1)
+    d.line([x + w * 0.63, y + h * 0.78, x + w * 0.74, y + h * 0.55,
+            x + w * 0.84, y + h * 0.60, x + w * 0.95, y + h * 0.28],
+           fill=RED, width=3)
+    d.polygon([(x + w * 0.95, y + h * 0.28), (x + w * 0.88, y + h * 0.26),
+               (x + w * 0.93, y + h * 0.38)], fill=RED)
+
+
+def scene_cop31(d, x, y, w, h):
+    # Split scene: clean energy (sun + turbine) vs smoke stack.
+    d.rectangle([x, y, x + w * 0.52, y + h], fill=(168, 205, 150))
+    d.rectangle([x + w * 0.52, y, x + w, y + h], fill=(150, 150, 152))
+    d.ellipse([x + w * 0.06, y + h * 0.08, x + w * 0.18, y + h * 0.32],
+              fill=(250, 214, 120))
+    tx = x + w * 0.32
+    d.line([tx, y + h * 0.78, tx, y + h * 0.30], fill=(255, 255, 255),
+           width=3)
+    hx, hy = tx, y + h * 0.30
+    for dx, dy in [(0, -13), (-11, 7), (11, 7)]:
+        d.line([hx, hy, hx + dx, hy + dy], fill=(255, 255, 255), width=2)
+    d.ellipse([hx - 2, hy - 2, hx + 2, hy + 2], fill=(255, 255, 255))
+    d.rectangle([x, y + h * 0.78, x + w * 0.52, y + h], fill=(110, 160, 90))
+    d.rectangle([x + w * 0.62, y + h * 0.55, x + w * 0.90, y + h],
+                fill=(90, 90, 96))
+    d.rectangle([x + w * 0.80, y + h * 0.22, x + w * 0.86, y + h * 0.55],
+                fill=(70, 70, 76))
+    for cx, cy, r in [(0.83, 0.14, 6), (0.86, 0.06, 5), (0.80, 0.05, 4)]:
+        d.ellipse([x + cx * w - r, y + cy * h - r, x + cx * w + r,
+                   y + cy * h + r], fill=(210, 210, 205))
+    for i in range(5):
+        yy = y + (i + 0.5) * h / 5
+        d.line([x + w * 0.52, yy, x + w * 0.52, yy + h / 10],
+               fill=(255, 255, 255), width=2)
+
+
 def scene_truce(d, x, y, w, h):
-    d.rectangle([x, y, x + w, y + h], fill=(232, 226, 204))
-    d.rectangle([x, y + h * 0.55, x + w * 0.44, y + h * 0.72],
-                fill=(150, 140, 118))
-    d.rectangle([x + w * 0.56, y + h * 0.55, x + w, y + h * 0.72],
-                fill=(150, 140, 118))
-    d.line([x + w * 0.44, y + h * 0.55, x + w * 0.50, y + h * 0.72],
-           fill=INK, width=2)
-    d.line([x + w * 0.56, y + h * 0.55, x + w * 0.50, y + h * 0.72],
-           fill=INK, width=2)
-    d.ellipse([x + w * 0.38, y + h * 0.18, x + w * 0.56, y + h * 0.36],
+    # Concrete Gaza truce scene: damaged skyline, white flag, olive branch.
+    d.rectangle([x, y, x + w, y + h], fill=(196, 216, 232))
+    d.ellipse([x + w * 0.84, y + 4, x + w * 0.94, y + 14],
+              fill=(250, 214, 120))
+    # Dove, top centre.
+    d.ellipse([x + w * 0.55, y + h * 0.10, x + w * 0.66, y + h * 0.22],
               fill=(255, 255, 255))
-    d.polygon([(x + w * 0.56, y + h * 0.22), (x + w * 0.72, y + h * 0.26),
-               (x + w * 0.56, y + h * 0.32)], fill=(255, 255, 255))
-    d.ellipse([x + w * 0.42, y + h * 0.22, x + w * 0.45, y + h * 0.25],
+    d.polygon([(x + w * 0.66, y + h * 0.12), (x + w * 0.76, y + h * 0.16),
+               (x + w * 0.66, y + h * 0.20)], fill=(255, 255, 255))
+    d.ellipse([x + w * 0.63, y + h * 0.11, x + w * 0.66, y + h * 0.15],
               fill=INK)
-    d.line([x + w * 0.58, y + h * 0.28, x + w * 0.68, y + h * 0.20],
-           fill=(14, 92, 92), width=2)
-    d.polygon([(x + w * 0.78, y + h * 0.14), (x + w * 0.88, y + h * 0.34),
-               (x + w * 0.68, y + h * 0.34)], outline=(178, 34, 34), width=2)
+    # Damaged skyline with broken tops.
+    for bx, bw_, bh_ in [(0.02, 0.16, 0.40), (0.20, 0.14, 0.52),
+                         (0.36, 0.18, 0.44), (0.56, 0.14, 0.55),
+                         (0.72, 0.13, 0.42), (0.87, 0.11, 0.48)]:
+        d.rectangle([x + bx * w, y + h * (0.86 - bh_),
+                     x + (bx + bw_) * w, y + h * 0.86],
+                    fill=(120, 116, 110))
+        d.rectangle([x + (bx + bw_ * 0.55) * w, y + h * (0.86 - bh_),
+                     x + (bx + bw_) * w, y + h * (0.86 - bh_ + 0.08)],
+                    fill=(196, 216, 232))
+        for wy in (0.60, 0.72):
+            if bh_ > 0.86 - wy:
+                d.rectangle([x + (bx + 0.03) * w, y + h * wy,
+                             x + (bx + 0.07) * w, y + h * wy + 2],
+                            fill=(60, 58, 54))
+    # White flag on a pole atop the middle building.
+    fx = x + w * 0.44
+    d.line([fx, y + h * 0.14, fx, y + h * 0.42], fill=INK, width=2)
+    d.polygon([(fx, y + h * 0.14), (fx + 18, y + h * 0.18),
+               (fx, y + h * 0.24)], fill=(255, 255, 255),
+              outline=(120, 116, 104))
+    # Olive branch, bottom-left foreground.
+    bx0, by0 = x + w * 0.06, y + h * 0.92
+    d.line([bx0, by0, bx0 + 34, by0 - 16], fill=(14, 92, 92), width=2)
+    for i, (ox, oy) in enumerate([(6, -3), (14, -7), (22, -11), (28, -14)]):
+        d.ellipse([bx0 + ox - 4, by0 + oy - 2, bx0 + ox + 4, by0 + oy + 2],
+                  fill=(40, 120, 60))
+    d.rectangle([x, y + h * 0.86, x + w, y + h], fill=(168, 142, 96))
 
 
 SCENES = {
@@ -506,6 +746,8 @@ SCENES = {
     "awards": scene_awards, "tennis": scene_tennis,
     "parliament": scene_parliament, "market": scene_market,
     "ipo": scene_ipo, "trade": scene_trade, "truce": scene_truce,
+    "gta": scene_gta, "strikes": scene_strikes,
+    "fed": scene_fed, "cop31": scene_cop31,
 }
 
 # ---------------------------------------------------------------- drawing
@@ -575,15 +817,30 @@ def draw_map(d, x, y, w, h):
            fill=MUTED)
     mx, my, mw, mh = x + 8, y + 24, w - 16, h - 42
     cw, ch = mw / 96.0, mh / 36.0
+    land_cells = {(r, c) for r, spans in enumerate(LAND)
+                  for a, b in spans for c in range(a, b + 1)}
+    for r, c in land_cells:
+        d.rectangle([mx + c * cw, my + r * ch,
+                     mx + (c + 1) * cw, my + (r + 1) * ch],
+                    fill=(203, 214, 228))
     for r, spans in enumerate(LAND):
         cy = my + (r + 0.5) * ch
         for a, b in spans:
             for c in range(a, b + 1):
                 cx = mx + (c + 0.5) * cw
-                d.ellipse([cx - 1.4, cy - 1.4, cx + 1.4, cy + 1.4],
-                          fill=(96, 116, 150))
-    offsets = {9: (-16, 8), 10: (4, -14), 12: (16, 12), 13: (-6, 8),
-               1: (0, -2)}
+                coast = ((r - 1, c) not in land_cells or
+                         (r + 1, c) not in land_cells or
+                         (r, c - 1) not in land_cells or
+                         (r, c + 1) not in land_cells)
+                if coast:
+                    d.ellipse([cx - 2.1, cy - 2.1, cx + 2.1, cy + 2.1],
+                              fill=(40, 64, 104))
+                else:
+                    d.ellipse([cx - 1.6, cy - 1.6, cx + 1.6, cy + 1.6],
+                              fill=(110, 128, 158))
+    offsets = {1: (0, -2), 2: (10, -12), 4: (12, -16), 5: (-18, -14),
+               6: (-20, -10), 7: (18, -4), 9: (16, 10), 10: (14, 14),
+               12: (-16, 16), 13: (-14, 4)}
     for feat in FEATURED:
         num, lon, lat = feat[0], feat[8], feat[9]
         if lon is None:
