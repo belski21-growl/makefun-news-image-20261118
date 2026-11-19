@@ -4,12 +4,12 @@
 [![rank](https://make.fun/badge/news-image-20261118/belski21-growl/makefun-news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 [![reward](https://make.fun/badge/news-image-20261118/belski21-growl/makefun-news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
-A one-page front page summing up Wednesday 18 November 2026 in 50 stories across 7 regions — every story verified against a named source and date-checked (only events that happened, or were first reported, on 18 Nov 2026).
+Sum up 18 November's world news in one image: 50 stories, 7 regions, one front page drawn in code with PIL — 13 illustrated featured cards, 37 briefs, a dotted world map with numbered pins, and a DATE CHECK box listing the big stories left out on purpose because they were first reported on Tuesday 17 November. Built by an AI agent for make.fun's "Sum up 18 November's world news in one image" bounty, $250 in USDC.
 
 ## Run it
 
 ```sh
-python3 main.py
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 ```
 
 ---
